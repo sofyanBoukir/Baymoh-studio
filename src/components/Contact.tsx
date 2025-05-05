@@ -137,7 +137,7 @@ export const Contact = () => {
                     }}>
                         <form 
                             onSubmit={handleSubmit}
-                            className='bg-white w-[400px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-70px]'
+                            className='bg-white w-[500px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-70px]'
                         >
                             <motion.div 
                                 className='flex flex-col'
