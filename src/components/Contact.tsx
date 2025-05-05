@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import talata from '../assets/talata.jpg'
 import { motion } from 'framer-motion';
+import talata from '../assets/talata.jpg';
+import { AnimatedSection } from '../animation/AnimationSection';
 
 interface FormData {
     name: string;
@@ -71,7 +72,7 @@ export const Contact = () => {
             
             Message:
             ${formData.message}
-        `.replace(/^\s+/gm, ''); 
+        `.replace(/^\s+/gm, '');
         
         const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
@@ -89,83 +90,177 @@ export const Contact = () => {
     };
 
     return (
-        <div className='w-[100%] bg-gradient-to-b from-sky-950 py-20 text-white to-sky-800'>
-            <div className='lg:w-[50%] mx-auto w-[90%] text-center'>
-                <motion.h1 
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-5xl font-semibold uppercase text-center"
-                >
-                    Contact US
-                </motion.h1>
+        <AnimatedSection 
+            className='w-[100%] bg-gradient-to-b from-sky-950 py-20 text-white to-sky-800'
+            config={{
+                initial: { opacity: 0, y: 20 },
+                animate: { opacity: 1, y: 0 },
+                transition: { duration: 0.8 }
+            }}
+        >
+            <div className='lg:w-[50%] mx-auto w-[90%] text-center' id='contact'>
+                <AnimatedSection config={{
+                    initial: { opacity: 0, y: -20 },
+                    animate: { opacity: 1, y: 0 },
+                    transition: { delay: 0.2 }
+                }}>
+                    <h1 className="text-5xl font-semibold uppercase text-center">
+                        Contact US
+                    </h1>
+                </AnimatedSection>
+                
                 <br />
-                <p className='text-2xl'>Reach out to our experienced team for exceptional marketing results.</p>
+
+                <AnimatedSection config={{
+                    initial: { opacity: 0 },
+                    animate: { opacity: 1 },
+                    transition: { delay: 0.4 }
+                }}>
+                    <p className='text-2xl'>
+                        Reach out to our experienced team for exceptional marketing results.
+                    </p>
+                </AnimatedSection>
+
                 <div className='flex flex-col items-center w-[100%]'>
-                    <img src={talata} className='w-[400px] h-[300px]' alt="Contact illustration"/>
-                    <form onSubmit={handleSubmit} className='bg-white w-[400px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-70px]'>
-                        <div className='flex flex-col'>
-                            <label className='text-lg'>Enter your name*</label>
-                            <input 
-                                type="text" 
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                placeholder='Type your name' 
-                                className={`px-3 py-2 rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-400'}`}
-                            />
-                            {errors.name && <span className="text-red-500 text-sm">{errors.name}</span>}
-                        </div>
+                    <AnimatedSection config={{
+                        initial: { opacity: 0, scale: 0.9 },
+                        animate: { opacity: 1, scale: 1 },
+                        transition: { delay: 0.6 }
+                    }}>
+                        <img src={talata} className='w-[400px] h-[300px]' alt="Contact illustration"/>
+                    </AnimatedSection>
 
-                        <div className='flex flex-col'>
-                            <label className='text-lg'>Phone number*</label>
-                            <input 
-                                type="text" 
-                                name="phone"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                placeholder='Type your phone' 
-                                className={`px-3 py-2 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-400'}`}
-                            />
-                            {errors.phone && <span className="text-red-500 text-sm">{errors.phone}</span>}
-                        </div>
-
-                        <div className='flex flex-col'>
-                            <label className='text-lg'>Provide your email address*</label>
-                            <input 
-                                type="email" 
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder='Type your email' 
-                                className={`px-3 py-2 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-400'}`}
-                            />
-                            {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
-                        </div>
-
-                        <div className='flex flex-col'>
-                            <label className='text-lg'>Drop us a message*</label>
-                            <textarea 
-                                rows={4} 
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                placeholder='Write your message' 
-                                className={`px-3 py-2 rounded-md border ${errors.message ? 'border-red-500' : 'border-gray-400'}`}
-                            />
-                            {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
-                        </div>
-                        
-                        <button 
-                            type="submit"
-                            className='bg-sky-700 hover:bg-sky-800 duration-100 px-6 py-3 rounded-3xl text-white cursor-pointer w-[40%] mx-auto disabled:opacity-50'
-                            disabled={isSubmitting}
+                    <AnimatedSection config={{
+                        initial: { opacity: 0, y: 50 },
+                        animate: { opacity: 1, y: 0 },
+                        transition: { delay: 0.8 }
+                    }}>
+                        <form 
+                            onSubmit={handleSubmit}
+                            className='bg-white w-[400px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-70px]'
                         >
-                            {isSubmitting ? 'Sending...' : 'Send message now'}
-                        </button>
-                    </form>
+                            <motion.div 
+                                className='flex flex-col'
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ type: 'spring', stiffness: 300 }}
+                            >
+                                <label className='text-lg'>Enter your name*</label>
+                                <input 
+                                    type="text" 
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    placeholder='Type your name' 
+                                    className={`px-3 py-2 rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-400'}`}
+                                />
+                                {errors.name && (
+                                    <motion.span 
+                                        className="text-red-500 text-sm"
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                    >
+                                        {errors.name}
+                                    </motion.span>
+                                )}
+                            </motion.div>
+
+                            <motion.div 
+                                className='flex flex-col'
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ type: 'spring', stiffness: 300 }}
+                            >
+                                <label className='text-lg'>Phone number*</label>
+                                <input 
+                                    type="text" 
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                    placeholder='Type your phone' 
+                                    className={`px-3 py-2 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-400'}`}
+                                />
+                                {errors.phone && (
+                                    <motion.span 
+                                        className="text-red-500 text-sm"
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                    >
+                                        {errors.phone}
+                                    </motion.span>
+                                )}
+                            </motion.div>
+
+                            <motion.div 
+                                className='flex flex-col'
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ type: 'spring', stiffness: 300 }}
+                            >
+                                <label className='text-lg'>Provide your email address*</label>
+                                <input 
+                                    type="email" 
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    placeholder='Type your email' 
+                                    className={`px-3 py-2 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-400'}`}
+                                />
+                                {errors.email && (
+                                    <motion.span 
+                                        className="text-red-500 text-sm"
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                    >
+                                        {errors.email}
+                                    </motion.span>
+                                )}
+                            </motion.div>
+
+                            <motion.div 
+                                className='flex flex-col'
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ type: 'spring', stiffness: 300 }}
+                            >
+                                <label className='text-lg'>Drop us a message*</label>
+                                <textarea 
+                                    rows={4} 
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder='Write your message' 
+                                    className={`px-3 py-2 rounded-md border ${errors.message ? 'border-red-500' : 'border-gray-400'}`}
+                                />
+                                {errors.message && (
+                                    <motion.span 
+                                        className="text-red-500 text-sm"
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                    >
+                                        {errors.message}
+                                    </motion.span>
+                                )}
+                            </motion.div>
+                            
+                            <motion.button 
+                                type="submit"
+                                className='bg-sky-700 hover:bg-sky-800 duration-100 px-6 py-3 rounded-3xl text-white cursor-pointer w-[70%] lg:w-[40%] mx-auto disabled:opacity-50'
+                                disabled={isSubmitting}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                {isSubmitting ? (
+                                    <motion.span
+                                        animate={{ opacity: [0.5, 1, 0.5] }}
+                                        transition={{ repeat: Infinity, duration: 1.5 }}
+                                    >
+                                        Sending...
+                                    </motion.span>
+                                ) : (
+                                    'Send message now'
+                                )}
+                            </motion.button>
+                        </form>
+                    </AnimatedSection>
                 </div>
             </div>
-        </div>
+        </AnimatedSection>
     )
 }

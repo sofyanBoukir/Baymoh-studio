@@ -1,10 +1,124 @@
+import { AnimatedSection } from '../animation/AnimationSection';
+import agLogo from '../assets/talata-logo.png';
+import { motion } from 'framer-motion';
+import bgTalata from '../assets/bgTalara.jpeg';
+import { Link } from 'react-scroll'
+import talata from '../assets/talata.jpg';
 
 export const Home = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nam cupiditate accusantium quidem veritatis quis et, officiis tempore inventore eum deleniti adipisci eligendi. Nostrum, placeat quos dolore harum velit natus consequuntur accusamus voluptatem molestiae eius animi incidunt et saepe, cumque aliquid similique fugit rem quia asperiores illum. Corrupti, quaerat sequi reiciendis sunt ratione, nam qui sed recusandae earum corporis accusamus veniam doloribus quibusdam inventore? Facere ullam minus ducimus sint hic veritatis velit est impedit at amet quisquam dolore incidunt in mollitia similique quis illum corrupti saepe corporis, repellendus sit ex necessitatibus. Eius, aperiam explicabo deserunt recusandae repellat modi laboriosam at!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique veniam corporis obcaecati id quae expedita consequatur ipsa soluta sunt ipsum! Voluptate ea, fuga, doloribus rem iusto nam officia quas vero vitae quos sint impedit quam maxime reprehenderit sunt commodi tempora explicabo exercitationem quis velit expedita! Sequi aut assumenda amet natus nulla vitae est nobis commodi, similique velit expedita veniam nam ullam excepturi magni, numquam rerum placeat porro architecto odit provident corporis. Obcaecati id et alias, placeat magni quidem sequi iure porro dicta architecto adipisci voluptates pariatur velit, asperiores quaerat quae suscipit mollitia numquam earum laudantium dolorum repudiandae error? Unde minima eveniet ab sit, facere pariatur eius voluptatibus ut excepturi quia nam magnam tempora fugit, esse eligendi obcaecati earum error? Voluptate soluta alias laborum tempore quas sapiente labore eaque, doloremque voluptatibus dolor ratione porro expedita rerum quaerat sed quam! Voluptatum quos corrupti magni saepe harum velit nisi assumenda. Totam explicabo fugit ipsum architecto, harum voluptatibus hic doloremque ad iure at aliquid expedita, aliquam ducimus necessitatibus cum id quaerat libero nesciunt eum blanditiis repellendus minus repellat. Dicta, quis officiis ipsam sit commodi recusandae est deleniti debitis pariatur! Est maiores natus placeat temporibus qui saepe debitis tempora autem error pariatur dolores praesentium quod voluptatem maxime expedita possimus aliquam velit et architecto, unde, totam quaerat rem ex excepturi. Natus excepturi fugiat quaerat labore consequatur eveniet repellat reprehenderit nihil odio similique. Atque perspiciatis voluptatem tempora quia illo provident quas quod est ipsum, quos vitae ratione cupiditate, rem cum blanditiis, ea porro reprehenderit corporis eligendi obcaecati officiis accusamus? Quis nam et, quam temporibus suscipit praesentium iure laboriosam ex maxime voluptatum iste eligendi vel deserunt consequuntur alias itaque assumenda! Voluptatibus culpa quaerat dicta vero facere praesentium veritatis facilis magnam inventore, laborum esse minima ad laboriosam quo? Porro doloribus non ab commodi, animi accusantium, facilis aliquid eum officiis quam cupiditate deserunt! Sed sapiente nulla est nostrum numquam, laudantium voluptatibus iure aperiam alias sint reprehenderit magnam magni optio recusandae autem quis blanditiis quam nobis ipsa? Exercitationem nobis neque dolorum? Sed cupiditate deserunt exercitationem dolores ducimus dolore cumque a quas ab obcaecati id quo debitis, maxime similique cum aperiam esse eligendi voluptatum nesciunt harum iusto sint sequi ullam! Perspiciatis itaque culpa libero reiciendis eveniet dolor placeat, molestiae vero ex laboriosam sint provident dolores neque optio vitae totam ea similique consequuntur error eligendi deleniti molestias. Nostrum nemo iusto vitae, repudiandae accusamus atque facere tempora libero perspiciatis consequatur facilis aliquam assumenda quisquam eaque nulla nam sapiente maiores omnis quia natus corporis qui quis explicabo quasi. Soluta eius ipsam porro aperiam dignissimos ipsum reprehenderit incidunt aut laborum velit, ab natus earum. Recusandae placeat distinctio similique exercitationem voluptas laboriosam sint voluptatum beatae, magnam expedita adipisci consectetur consequatur vitae. Iure delectus quod voluptas rerum molestias asperiores illum obcaecati voluptates eius alias dolor ullam reprehenderit, hic ipsa consectetur, fugit, sed earum doloribus tempora dolores eos culpa. Omnis enim eveniet laboriosam officiis necessitatibus, quia minus sit non labore praesentium eum recusandae distinctio dolore impedit aut, voluptatibus consectetur laborum ullam. Sequi maiores alias tenetur, tempora eius distinctio repellat commodi quos est fuga suscipit, aliquid ex, non eligendi voluptatibus et laborum quis reprehenderit. Numquam, officia nisi architecto possimus voluptas illo deleniti quam, magnam vel optio sunt tempora quasi explicabo est, dolore nulla! Exercitationem placeat possimus odit, dolore quaerat ipsa. Ipsum, nesciunt rerum accusamus veritatis eius eum nobis. Eaque assumenda ipsa non, sed quod molestiae cum, ex dolorum consectetur eos amet, maxime quam nostrum unde dolores sint! Illum repudiandae repellendus facilis nobis ea, voluptatem commodi sapiente ipsam animi molestiae accusantium debitis, excepturi, a porro dolorum quae praesentium dolor eius doloremque voluptas rerum! Quo quisquam animi tenetur dolore consectetur nulla, dolores, sed praesentium dolor architecto atque aliquam mollitia. Sequi, iure unde aliquam, voluptatum praesentium nulla sint voluptatem est accusamus soluta maiores distinctio ipsa deserunt eaque magnam, quidem similique quis minus ratione ad? Aliquam, quas eligendi assumenda tenetur modi exercitationem ipsum. Possimus dolorem optio in dolores accusantium voluptatem dolor odit perferendis? Est sunt facere cumque esse incidunt, corrupti reprehenderit ullam ipsa natus quia quibusdam quam fugiat dolor ad perferendis illum vitae illo beatae suscipit ex, earum voluptatibus alias? Magnam voluptatibus officiis harum optio saepe quia nesciunt laboriosam officia suscipit, ut voluptatem esse totam consectetur illo consequatur temporibus perspiciatis. Aspernatur minima rem minus repellendus iure voluptatem sed officiis illum laborum, dolorum deserunt adipisci amet repudiandae tempora quibusdam necessitatibus veritatis, hic dolores dolor aliquam possimus libero? Voluptate, exercitationem et? Perspiciatis vel facere repellendus sunt eius in nostrum est voluptate nam. Inventore neque iusto veritatis nostrum consectetur, eligendi debitis vero incidunt pariatur tempore rerum assumenda minus corrupti natus et ab saepe dicta optio ut quis dolor perferendis? Aliquam doloribus tenetur temporibus adipisci velit quos praesentium nam ad quam similique mollitia voluptate, libero sint expedita necessitatibus soluta ut pariatur consequatur commodi maiores reprehenderit! Eum, inventore id unde, dolor recusandae corporis maxime autem ipsam obcaecati corrupti, ab voluptatibus at impedit dolorem culpa animi aut totam consequatur consectetur laboriosam. Fuga necessitatibus, nam nisi quae exercitationem nostrum ipsum debitis! Vitae repellat ab dignissimos! Itaque velit delectus minima placeat consequuntur minus error maxime sint, facere natus eum modi corporis! Repellat ut, eaque culpa voluptates, laudantium ullam ad autem quisquam tempora eligendi sapiente placeat neque praesentium sequi est! Qui numquam animi eos amet eaque fugiat commodi quam ducimus illo deleniti magnam dolorem culpa a esse nemo impedit enim, iste tenetur labore perferendis, recusandae, odio voluptatem voluptate. Cumque laborum illo, impedit quod quasi quas corporis veniam reprehenderit cum repellat ducimus ea exercitationem rerum incidunt quam officia debitis dignissimos rem tenetur. Amet, illo sint. Ipsam, quisquam et, minima asperiores iure voluptas laudantium velit ratione placeat eius rerum optio esse! Officia esse voluptatibus dolorum. Nostrum nihil rem eveniet at error inventore qui veniam quasi consequuntur? Accusamus quae veritatis tenetur aut, laudantium culpa voluptate odio perspiciatis maxime magnam iure totam eum! In hic delectus, voluptatum nam amet error, sit quibusdam provident id aut dolore voluptas aspernatur eius nulla placeat nesciunt qui sunt at blanditiis excepturi. Maxime a libero voluptatum aut? Odit sed quaerat iste atque accusamus, accusantium nam commodi eveniet corporis architecto aut autem nemo!
-            </h1>
-        </div>
-    )
-}
+        <AnimatedSection
+            config={{
+                initial: { opacity: 0, y: 20 },
+                animate: { opacity: 1, y: 0 },
+                transition: { duration: 0.8 }
+            }}
+        >
+            <div className="relative w-full min-h-screen">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: `url(${bgTalata})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                    }}
+                ></div>
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/60 z-10"></div>
+
+                {/* Main Content */}
+                <div className="relative z-20 w-[60%] mx-auto py-10 text-center flex flex-col items-center text-white">
+                    <AnimatedSection config={{
+                        initial: { opacity: 0, scale: 0.8 },
+                        animate: { opacity: 1, scale: 1 },
+                        transition: { delay: 0.2 }
+                    }}>
+                        <img src={agLogo} alt='logo' className='w-82 h-40' />
+                    </AnimatedSection>
+
+                    <AnimatedSection config={{
+                        initial: { opacity: 0, y: -20 },
+                        animate: { opacity: 1, y: 0 },
+                        transition: { delay: 0.4 }
+                    }}>
+                        <h1 className='text-6xl font-semibold uppercase'>Studio talata</h1>
+                    </AnimatedSection>
+
+                    <AnimatedSection config={{
+                        initial: { opacity: 0 },
+                        animate: { opacity: 1 },
+                        transition: { delay: 0.6 }
+                    }}>
+                        <p className='text-xl'>Be with us we will be with you we are talata</p>
+                    </AnimatedSection>
+                    <br />
+                    <AnimatedSection config={{
+                        initial: { opacity: 0, y: 20 },
+                        animate: { opacity: 1, y: 0 },
+                        transition: { delay: 0.8 }
+                    }}>
+                        <Link
+                            to="contact" 
+                            smooth={true} 
+                            duration={500}
+                            offset={-50}
+                            >
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="cursor-pointer bg-blue-600 px-6 py-2 rounded-full mt-4"
+                            >
+                                Contact
+                            </motion.div>
+                        </Link>
+                    </AnimatedSection>
+                </div>
+
+                <div className='relative z-20 color-to-blue mt-20 text-white py-16 px-8 md:px-32'>
+                    <AnimatedSection config={{
+                        initial: { opacity: 0, y: 50 },
+                        animate: { opacity: 1, y: 0 },
+                        transition: { delay: 1.0, duration: 0.8 }
+                    }}>
+                        <div className='flex flex-col lg:flex-row lg:w-[70%] w-[90%] mx-auto justify-between gap-8 lg:gap-16 py-8'>
+                            <div className="w-full lg:w-[60%]">
+                                <h1 className='text-2xl sm:text-3xl md:text-4xl font-semibold uppercase mb-4 md:mb-6'>Welcome</h1>
+                                <p className='text-base sm:text-lg md:text-xl font-light leading-relaxed'>
+                                    <span className='underline'>TALATA</span>, a leading company in the field of audiovisual production, digital education, and virtual events. We are proud to provide integrated solutions that help our clients excel in the rapidly evolving digital world.
+                                    <br /><br />
+                                    Since our establishment in 2022, despite the short duration, we have earned a distinguished reputation thanks to the expertise of our technical and creative team. We constantly strive to develop our skills and discover the latest technologies to be the ideal partner for our clients on their journey towards digital success.
+                                </p>
+                            </div>
+
+                            {/* Image and Stats */}
+                            <div className='w-full lg:w-[40%] flex flex-col gap-4'>
+                                <div className='relative'>
+                                    <img 
+                                        src={talata} 
+                                        alt="logo" 
+                                        className='w-full h-auto max-h-64 object-cover rounded-lg shadow-lg'
+                                    />
+                                </div>
+                                
+                                <div className='bg-sky-600 p-4 rounded-lg text-white flex justify-between items-center'>
+                                    <div className='text-center'>
+                                        <h1 className='text-2xl sm:text-3xl font-semibold'>+150</h1>
+                                        <p className='text-sm sm:text-base'>Happy clients</p>
+                                    </div>
+                                    <div className='h-8 w-px bg-white/50'></div>
+                                    <div className='text-center'>
+                                        <h1 className='text-2xl sm:text-3xl font-semibold'>+150</h1>
+                                        <p className='text-sm sm:text-base'>Happy clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </AnimatedSection>
+                </div>
+            </div>
+        </AnimatedSection>
+    );
+};

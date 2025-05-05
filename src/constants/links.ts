@@ -2,9 +2,9 @@
 
 
 export const links = {
-    home : '/',
-    studio: '/studio',
-    events : '/events',
-    projects : '/projects',
-    contact : '/contact'
+    Home : '/',
+    Studio: '/studio',
+    Events : '/events',
+    Projects : '/projects',
+    Contact : '/contact'
 }

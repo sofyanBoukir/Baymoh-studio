@@ -1,17 +1,14 @@
-import { Outlet } from "react-router-dom"
+import { Contact } from "../components/Contact"
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
-import { Contact } from "../components/Contact"
 
-
-export const Layout = () => {
+export const ContactP = () => {
     return (
         <div>
             <Header />
             <div className="mt-[100px]">
-                <Outlet />
+                <Contact />
             </div>
-            <Contact />
             <Footer />
         </div>
     )
