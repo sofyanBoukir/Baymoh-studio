@@ -128,45 +128,69 @@ export const Home = () => {
                         <p>TALATA is a project that came about after years of extensive work during which we have learned various digital skills. Among the areas we currently offer are: 1. Audiovisual studio 2. Online education 3. Event organization</p>
                     
                         <div className='flex flex-col md:flex-row justify-between gap-4 md:gap-6 mt-4'>
-                            <div className='w-full md:w-[32%] text-start rounded-md bg-sky-800 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300'>
-                                <img 
-                                    src={service1} 
-                                    className='w-full h-48 object-cover'
-                                    alt="Audiovisual Production"
-                                />
-                                <div className='px-4 py-4'>
-                                    <h1 className='text-lg md:text-xl font-semibold mb-2'>1- Audiovisual Production</h1>
-                                    <p className='text-sm md:text-base'>
-                                        We provide professional services in the field of photography and design, in all its forms and types. Whether it's producing a visual identity, a television commercial, or creating content for social media platforms, we are committed to delivering remarkable results.
-                                    </p>
+                            <div className='w-full md:w-[32%] text-start transition-shadow duration-300'>
+                                <div className='bg-sky-800 rounded-lg overflow-hidden shadow-lg'>
+                                    <img 
+                                        src={service1} 
+                                        className='w-full h-48 object-cover'
+                                        alt="Audiovisual Production"
+                                    />
+                                    <div className='px-4 py-4'>
+                                        <h1 className='text-lg md:text-xl font-semibold mb-2'>1- Audiovisual Production</h1>
+                                        <p className='text-sm md:text-base'>
+                                            We provide professional services in the field of photography and design, in all its forms and types. Whether it's producing a visual identity, a television commercial, or creating content for social media platforms, we are committed to delivering remarkable results.
+                                        </p>
+                                    </div>
+                                </div>
+                                <br />
+                                <div className='flex justify-center'>
+                                    <button className='bg-sky-900 py-3 border border-white rounded-full w-[50%] mx-auto text-white'>
+                                        <a href="">Learn more</a>
+                                    </button>
                                 </div>
                             </div>
 
-                            <div className='w-full md:w-[32%] text-start rounded-md bg-sky-800 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300'>
-                                <img 
-                                    src={service2} 
-                                    className='w-full h-48 object-cover'
-                                    alt="Digital Education"
-                                />
-                                <div className='px-4 py-4'>
-                                    <h1 className='text-lg md:text-xl font-semibold mb-2'>2- Digital Education</h1>
-                                    <p className='text-sm md:text-base'>
-                                        We provide professional services in the field of photography and design, in all its forms and types. Whether it's producing a visual identity, a television commercial, or creating content for social media platforms, we are committed to delivering remarkable results.
-                                    </p>
+                            <div className='w-full md:w-[32%] text-start transition-shadow duration-300'>
+                                <div className='bg-sky-800 rounded-lg overflow-hidden shadow-lg'>
+                                    <img 
+                                        src={service2} 
+                                        className='w-full h-48 object-cover'
+                                        alt="Digital Education"
+                                    />
+                                    <div className='px-4 py-4'>
+                                        <h1 className='text-lg md:text-xl font-semibold mb-2'>2- Digital Education</h1>
+                                        <p className='text-sm md:text-base'>
+                                            We provide professional services in the field of photography and design, in all its forms and types. Whether it's producing a visual identity, a television commercial, or creating content for social media platforms, we are committed to delivering remarkable results.
+                                        </p>
+                                    </div>
+                                </div>
+                                <br />
+                                <div className='flex justify-center'>
+                                    <button className='bg-sky-900 py-3 border border-white rounded-full w-[50%] mx-auto text-white'>
+                                        <a href="">Learn more</a>
+                                    </button>
                                 </div>
                             </div>
 
-                            <div className='w-full md:w-[32%] text-start rounded-md bg-sky-800 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300'>
-                                <img 
-                                    src={service3} 
-                                    className='w-full h-48 object-cover'
-                                    alt="Virtual Events"
-                                />
-                                <div className='px-4 py-4'>
-                                    <h1 className='text-lg md:text-xl font-semibold mb-2'>3- Virtual Events</h1>
-                                    <p className='text-sm md:text-base'>
-                                        We provide professional services in the field of photography and design, in all its forms and types. Whether it's producing a visual identity, a television commercial, or creating content for social media platforms, we are committed to delivering remarkable results.
-                                    </p>
+                            <div className='w-full md:w-[32%] text-start transition-shadow duration-300'>
+                                <div className='bg-sky-800 rounded-lg overflow-hidden shadow-lg'>
+                                    <img 
+                                        src={service3} 
+                                        className='w-full h-48 object-cover'
+                                        alt="Virtual Events"
+                                    />
+                                    <div className='px-4 py-4'>
+                                        <h1 className='text-lg md:text-xl font-semibold mb-2'>3- Virtual Events</h1>
+                                        <p className='text-sm md:text-base'>
+                                            We provide professional services in the field of photography and design, in all its forms and types. Whether it's producing a visual identity, a television commercial, or creating content for social media platforms, we are committed to delivering remarkable results.
+                                        </p>
+                                    </div>
+                                </div>
+                                <br />
+                                <div className='flex justify-center'>
+                                    <button className='bg-sky-900 py-3 border border-white rounded-full w-[50%] mx-auto text-white'>
+                                        <a href="">Learn more</a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +205,7 @@ export const Home = () => {
                         transition: { delay: 0, duration: 0.4 }
                     }}>
                         <div className='lg:w-[60%] w-[90%] mx-auto text-center'>
-                            <h1 className='text-5xl uppercase font-semibold'>We are talata</h1>
+                            <h1 className='text-5xl uppercase font-semibold'>Build your dreams with us</h1>
                             <p>let's develop your talent together</p>
 
                             <div className='mt-10 rounded-md'>

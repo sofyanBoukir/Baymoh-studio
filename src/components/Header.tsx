@@ -7,7 +7,8 @@ import { links } from '../constants/links';
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathName = window.location.pathname;
-
+  console.log(pathName);
+  
   return (
     <header className='flex fixed w-[100%] justify-between items-center color-to-blue md:px-[5%] px-4 py-3 top-0 h-[100px] z-50'>
       <div>
