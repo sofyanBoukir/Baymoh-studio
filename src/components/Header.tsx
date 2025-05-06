@@ -6,7 +6,7 @@ import { links } from '../constants/links';
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const location = useLocation(); // This will automatically update when route changes
+    const location = useLocation(); 
 
     return (
       <header className='flex fixed w-full justify-between items-center color-to-blue md:px-[5%] px-4 py-3 top-0 h-[100px] z-50'>
@@ -53,7 +53,6 @@ export const Header = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button 
           className='md:hidden text-white focus:outline-none'
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -66,7 +65,6 @@ export const Header = () => {
           )}
         </button>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className='md:hidden fixed inset-0 top-[100px] bg-sky-900 z-50 py-6 px-6 shadow-lg animate-fade-in'>
             <div className='flex flex-col space-y-6'>
