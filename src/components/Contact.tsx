@@ -74,7 +74,7 @@ export const Contact = () => {
             ${formData.message}
         `.replace(/^\s+/gm, '');
         
-        const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailtoLink = `mailto:soufianeboukir0@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
         window.location.href = mailtoLink;
         
@@ -98,7 +98,7 @@ export const Contact = () => {
                 transition: { duration: 0.8 }
             }}
         >
-            <div className='lg:w-[50%] mx-auto w-[90%] text-center' id='contact'>
+            <div className='lg:w-[100%] mx-auto w-[80%] text-center' id='contact'>
                 <AnimatedSection config={{
                     initial: { opacity: 0, y: -20 },
                     animate: { opacity: 1, y: 0 },
@@ -127,7 +127,7 @@ export const Contact = () => {
                         animate: { opacity: 1, scale: 1 },
                         transition: { delay: 0 }
                     }}>
-                        <img src={talata} className='w-[400px] h-[300px]' alt="Contact illustration"/>
+                        <img src={talata} className='w-[600px] h-[500px]' alt="Contact illustration"/>
                     </AnimatedSection>
 
                     <AnimatedSection config={{
@@ -137,7 +137,7 @@ export const Contact = () => {
                     }}>
                         <form 
                             onSubmit={handleSubmit}
-                            className='bg-white w-[500px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-70px]'
+                            className='bg-white w-[400px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-120px]'
                         >
                             <motion.div 
                                 className='flex flex-col'

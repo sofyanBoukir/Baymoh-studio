@@ -19,66 +19,103 @@ export const Home = () => {
             }}
         >
             <div className="relative w-full">
-                <div
-                    className="absolute inset-0 z-0"
-                    style={{
-                        backgroundImage: `url(${bgTalata})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat'
-                    }}
-                ></div>
-
-                <div className="absolute inset-0 bg-black/60 z-10"></div>
-
-                <div className="relative z-20 w-[60%] mx-auto py-10 text-center flex flex-col items-center text-white">
-                    <AnimatedSection config={{
-                        initial: { opacity: 0, scale: 0.8 },
-                        animate: { opacity: 1, scale: 1 },
-                        transition: { delay: 0.2 }
-                    }}>
-                        <img src={agLogo} alt='logo' className='w-82 h-40' />
-                    </AnimatedSection>
-
-                    <AnimatedSection config={{
-                        initial: { opacity: 0, y: -20 },
-                        animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.4 }
-                    }}>
-                        <h1 className='text-6xl font-semibold uppercase'>Studio talata</h1>
-                    </AnimatedSection>
-
-                    <AnimatedSection config={{
-                        initial: { opacity: 0 },
-                        animate: { opacity: 1 },
-                        transition: { delay: 0.6 }
-                    }}>
-                        <p className='text-xl'>Be with us we will be with you we are talata</p>
-                    </AnimatedSection>
-                    <br />
-                    <AnimatedSection config={{
-                        initial: { opacity: 0, y: 20 },
-                        animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.8 }
-                    }}>
-                        <Link
-                            to="contact" 
-                            smooth={true} 
-                            duration={500}
-                            offset={-50}
+                <div className="overflow-hidden">
+                            <AnimatedSection
+                                config={{
+                                    initial: { opacity: 0 },
+                                    animate: { opacity: 1 },
+                                    transition: { duration: 1 }
+                                }}
                             >
-                            <motion.div
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="cursor-pointer bg-blue-600 px-6 py-2 rounded-full mt-4"
-                            >
-                                Contact
-                            </motion.div>
-                        </Link>
-                    </AnimatedSection>
-                </div>
-
-                <div className='relative z-20 bg-gradient-to-b from color-to-blue to-sky-800 mt-20 text-white py-16 px-8 md:px-32'>
+                                <div className="relative w-full h-screen">
+                                    <motion.div
+                                        className="absolute inset-0 z-0"
+                                        style={{
+                                            backgroundImage: `url(${bgTalata})`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center',
+                                            backgroundRepeat: 'no-repeat'
+                                        }}
+                                        initial={{ scale: 1.2 }}
+                                        animate={{ scale: 1 }}
+                                        transition={{ duration: 1.5, ease: "easeOut" }}
+                                    ></motion.div>
+                
+                                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10"></div>
+                
+                                    <div className="relative z-20 w-full pt-30 flex flex-col items-center justify-center px-4 py-6 text-center text-white">
+                                        <AnimatedSection config={{
+                                            initial: { opacity: 0, y: -50, scale: 0.8 },
+                                            animate: { opacity: 1, y: 0, scale: 1 },
+                                            transition: { delay: 0.3, type: "spring", stiffness: 100 }
+                                        }}>
+                                            <motion.div
+                                                whileHover={{ scale: 1.05 }}
+                                                whileTap={{ scale: 0.95 }}
+                                            >
+                                                <img 
+                                                    src={agLogo} 
+                                                    alt='logo' 
+                                                    className='w-[300px] md:w-[400px] lg:w-[500px] h-auto max-h-[250px] object-contain' 
+                                                />
+                                            </motion.div>
+                                        </AnimatedSection>
+                                        
+                                        
+                                        <AnimatedSection config={{
+                                            initial: { opacity: 0, y: -20 },
+                                            animate: { opacity: 1, y: 0 },
+                                            transition: { delay: 0.8 }
+                                        }}>
+                                            <motion.h1 
+                                                className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mt-6 mb-4'
+                                                animate={{
+                                                    textShadow: ["0 0 8px rgba(255,255,255,0.3)", "0 0 16px rgba(255,255,255,0.5)", "0 0 8px rgba(255,255,255,0.3)"],
+                                                }}
+                                                transition={{
+                                                    duration: 2,
+                                                    repeat: Infinity,
+                                                    repeatType: "reverse"
+                                                }}
+                                            >
+                                                STUDIO TALATA
+                                            </motion.h1>
+                                        </AnimatedSection>
+                
+                                        <AnimatedSection config={{
+                                            initial: { opacity: 0, scale: 0.95 },
+                                            animate: { opacity: 1, scale: 1 },
+                                            transition: { delay: 1 }
+                                        }}>
+                                            <p className='text-lg md:text-xl lg:text-2xl max-w-2xl mx-auto leading-relaxed'>
+                                                Be with us we will be with you we are talata
+                                            </p>
+                                        </AnimatedSection>
+                                        <AnimatedSection config={{
+                                            initial: { opacity: 0, y: 20 },
+                                            animate: { opacity: 1, y: 0 },
+                                            transition: { delay: 0.8 }
+                                        }}>
+                                            <Link
+                                                to="contact" 
+                                                smooth={true} 
+                                                duration={500}
+                                                offset={-50}
+                                                >
+                                                <motion.div
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="cursor-pointer bg-blue-600 px-7 py-3 rounded-full mt-4 text-2xl"
+                                                >
+                                                    Contact
+                                                </motion.div>
+                                            </Link>
+                                        </AnimatedSection>
+                                    </div>
+                                </div>
+                            </AnimatedSection>
+                        </div>
+                <div className='relative z-20 bg-gradient-to-b from color-to-blue to-sky-800 text-white py-16 px-8 md:px-32'>
                     <AnimatedSection config={{
                         initial: { opacity: 0, y: 50 },
                         animate: { opacity: 1, y: 0 },

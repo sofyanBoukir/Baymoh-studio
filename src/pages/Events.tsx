@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import { AnimatedSection } from '../animation/AnimationSection';
 import bgTalata from '../assets/bgTalara.jpeg';
 import { motion } from 'framer-motion';
@@ -15,7 +14,6 @@ export const Events = () => {
                 }}
             >
                 <div className="relative w-full h-screen">
-                    {/* Background with parallax effect */}
                     <motion.div
                         className="absolute inset-0 z-0"
                         style={{
@@ -29,12 +27,9 @@ export const Events = () => {
                         transition={{ duration: 1.5, ease: "easeOut" }}
                     ></motion.div>
 
-                    {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10"></div>
 
-                    {/* Content */}
                     <div className="relative z-20 w-full h-full flex flex-col items-center justify-center px-4 py-10 text-center text-white">
-                        {/* Logo with fancy animation */}
                         <AnimatedSection config={{
                             initial: { opacity: 0, y: -50, scale: 0.8 },
                             animate: { opacity: 1, y: 0, scale: 1 },

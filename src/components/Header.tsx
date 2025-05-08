@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 import agLogo from '../assets/talata-logo.png';
 import { links } from '../constants/links';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -51,12 +52,12 @@ export const Header = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <Link 
-                            to={path} 
+                        <Link
+                            to={path}
                             className={`relative text-lg font-medium text-white hover:text-blue-300 transition-colors duration-200 ${
                                 location.pathname === path ? 'text-blue-300' : ''
                             }`}
-                        >
+                            >
                             {name}
                             {location.pathname === path && (
                                 <motion.span 
@@ -195,7 +196,6 @@ export const Header = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-
         </motion.header>
     );
 };
