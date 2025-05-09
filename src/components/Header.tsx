@@ -30,7 +30,7 @@ export const Header = () => {
             }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
             <motion.div
                 whileHover={{ scale: 1.05 }}

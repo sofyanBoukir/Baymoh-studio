@@ -1,7 +1,7 @@
 import { AnimatedSection } from '../animation/AnimationSection';
-import bgTalata from '../assets/bgTalara.jpeg';
+import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
-import agLogo from '../assets/talata-logo.png';
+import bodyLogo from '../assets/bodyImage.png'
 
 export const Events = () => {
     return (
@@ -17,7 +17,7 @@ export const Events = () => {
                     <motion.div
                         className="absolute inset-0 z-0"
                         style={{
-                            backgroundImage: `url(${bgTalata})`,
+                            backgroundImage: `url(${bodyLogo})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
@@ -27,7 +27,7 @@ export const Events = () => {
                         transition={{ duration: 1.5, ease: "easeOut" }}
                     ></motion.div>
 
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-10" />
 
                     <div className="relative z-20 w-full h-full flex flex-col items-center justify-center px-4 py-10 text-center text-white">
                         <AnimatedSection config={{
@@ -40,7 +40,7 @@ export const Events = () => {
                                 whileTap={{ scale: 0.95 }}
                             >
                                 <img 
-                                    src={agLogo} 
+                                    src={logo} 
                                     alt='logo' 
                                     className='w-[300px] md:w-[400px] lg:w-[500px] h-auto max-h-[250px] object-contain' 
                                 />
@@ -93,13 +93,13 @@ export const Events = () => {
                         }}>
                             <div className='flex justify-center gap-6 mt-8'>
                                 {[
-                                    { name: 'facebook', color: '#3b5998' },
-                                    { name: 'instagram', color: '#e1306c' },
-                                    { name: 'tiktok', color: '#010101' }
+                                    { name: 'facebook', color: '#3b5998',link:'https://www.facebook.com/baymoh.prod/' },
+                                    { name: 'instagram', color: '#e1306c',link:'https://www.instagram.com/baymoh_/' },
+                                    { name: 'tiktok', color: '#010101', link:'https://www.tiktok.com/@baymoh_'}
                                 ].map((social) => (
                                     <motion.a 
                                         key={social.name} 
-                                        href={`https://${social.name}.com`} 
+                                        href={social.link} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
                                         className="relative w-12 h-12 rounded-full flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"

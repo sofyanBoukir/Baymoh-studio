@@ -48,7 +48,7 @@ export const Studio = () => {
                 config={{
                     initial: { opacity: 0 },
                     animate: { opacity: 1 },
-                    transition: { duration: 1 }
+                    transition: { duration: 0.8 }
                 }}
             >
                 <div className="relative w-full h-[200px] lg:h-[360px] overflow-hidden">
@@ -134,10 +134,10 @@ export const Studio = () => {
                 config={{
                     initial: { opacity: 0, y: 50 },
                     animate: { opacity: 1, y: 0 },
-                    transition: { duration: 0.8 }
+                    transition: { duration: 0.5 }
                 }}
             >
-                <div className='bg-gradient-to-b from-blue-950 to-sky-900 py-8'>
+                <div className='bg-gradient-to-b from-amber-50 via-yellow-600 to-yellow-900 py-8'>
                     <div className='w-[100%] md:w-[70%] mx-auto text-center'>
                         <AnimatedSection config={{
                             initial: { opacity: 0, scale: 0.9 },
@@ -150,14 +150,14 @@ export const Studio = () => {
                                 alt="Studio Talata"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.4 }}
+                                transition={{ delay: 0.1 }}
                             />
                         </AnimatedSection>
                         
                         <AnimatedSection config={{
                             initial: { opacity: 0, y: 30 },
                             animate: { opacity: 1, y: 0 },
-                            transition: { delay: 0.5 }
+                            transition: { delay: 0.2 }
                         }}>
                             <div className='flex justify-center mt-[-110px]'>
                                 <motion.p 
@@ -172,7 +172,7 @@ export const Studio = () => {
                         <AnimatedSection config={{
                             initial: { opacity: 0 },
                             animate: { opacity: 1 },
-                            transition: { delay: 0.7 }
+                            transition: { delay: 0.4 }
                         }}>
                             <motion.span className='text-white block mt-8'>
                                 Expert guidance in audiovisual production, studio rental, and original content creation awaits you here.
@@ -182,7 +182,7 @@ export const Studio = () => {
                         <AnimatedSection config={{
                             initial: { opacity: 0 },
                             animate: { opacity: 1 },
-                            transition: { delay: 0.8 }
+                            transition: { delay: 0.1 }
                         }}>
                             <div className="mt-16 w-full px-4 md:px-8 lg:px-12 xl:px-0 max-w-7xl mx-auto">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -198,7 +198,7 @@ export const Studio = () => {
                                             config={{
                                                 initial: { opacity: 0, y: 30 },
                                                 animate: { opacity: 1, y: 0 },
-                                                transition: { delay: 0.5 + index * 0.1 }
+                                                transition: { delay: 0.1 + index * 0.1 }
                                             }}
                                         >
                                             <div className="group flex flex-col">
@@ -236,7 +236,7 @@ export const Studio = () => {
                                 <AnimatedSection config={{
                                     initial: { opacity: 0, y: 20 },
                                     animate: { opacity: 1, y: 0 },
-                                    transition: { delay: 1.2 }
+                                    transition: { delay: 0.3 }
                                 }}>
                                     <div className='text-center mt-20 text-white'>
                                         <motion.h1 
@@ -263,7 +263,7 @@ export const Studio = () => {
                 </div>
             </AnimatedSection>
 
-            <div className='bg-gradient-to-b from-blue-950 to-sky-800 py-20'>
+            <div className='bg-gradient-to-b from-yellow-900 via-yellow-600 to-yellow-900 py-20'>
                 <AnimatedSection
                     config={{
                         initial: { opacity: 0, y: 50 },
@@ -282,7 +282,7 @@ export const Studio = () => {
                                 alt="Content Creation"
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.4 }}
+                                transition={{ delay: 0.1 }}
                             />
                         </motion.div>
                         
@@ -301,7 +301,7 @@ export const Studio = () => {
                             className='flex justify-between gap-3 lg:gap-0 flex-col lg:flex-row w-[90%] mx-auto mt-6'
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.6 }}
+                            transition={{ delay: 0.2 }}
                         >
                             {[
                                 "https://www.youtube.com/embed/pzE8alwIIyk?si=QcvfrSSum-QkU8lz",
@@ -317,7 +317,7 @@ export const Studio = () => {
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.7 + i * 0.1 }}
+                                    transition={{ delay: 0.3 + i * 0.1 }}
                                 />
                             ))}
                         </motion.div>
@@ -330,7 +330,7 @@ export const Studio = () => {
                     config={{
                         initial: { opacity: 0, y: 50 },
                         animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.5 }
+                        transition: { delay: 0.1 }
                     }}
                 >
                     <div className='mx-auto text-center' id='visual_identity'>
@@ -344,7 +344,7 @@ export const Studio = () => {
                                 alt="Visual Identity"
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.6 }}
+                                transition={{ delay: 0.2 }}
                             />
                         </motion.div>
                         
@@ -363,7 +363,7 @@ export const Studio = () => {
                             className='grid grid-cols-3 lg:grid-cols-8 w-[90%] mx-auto mt-6'
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.8 }}
+                            transition={{ delay: 0.3 }}
                         >
                             {[
                                 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=245,fit=crop/mxB75M8GpXFPvRla/fgsdfg-m7VKkqQ3E4IJW2BB.png',
@@ -390,7 +390,7 @@ export const Studio = () => {
                                     alt={`Visual Identity example ${i+1}`}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.9 + i * 0.05 }}
+                                    transition={{ delay: 0.6 + i * 0.05 }}
                                 />
                             ))}
                         </motion.div>
@@ -403,7 +403,7 @@ export const Studio = () => {
                     config={{
                         initial: { opacity: 0, y: 50 },
                         animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.5 }
+                        transition: { delay: 0.2 }
                     }}
                 >
                     <div className='mx-auto text-center' id='photography'>
@@ -417,7 +417,7 @@ export const Studio = () => {
                                 alt="Photography"
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.8 }}
+                                transition={{ delay: 0.3 }}
                             />
                         </motion.div>
                         
@@ -436,7 +436,7 @@ export const Studio = () => {
                             className='grid grid-cols-3 lg:grid-cols-6 w-[90%] mx-auto mt-6'
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 1.0 }}
+                            transition={{ delay: 0.5 }}
                         >
                             {[
                                 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=306,fit=crop/mxB75M8GpXFPvRla/untitled-9-AGB4vLawkMhVpzJp.png',
@@ -459,7 +459,7 @@ export const Studio = () => {
                                     alt={`Photography example ${i+1}`}
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 1.1 + i * 0.05 }}
+                                    transition={{ delay: 0.8 + i * 0.05 }}
                                 />
                             ))}
                         </motion.div>
@@ -472,7 +472,7 @@ export const Studio = () => {
                     config={{
                         initial: { opacity: 0, y: 50 },
                         animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.7 }
+                        transition: { delay: 0.3 }
                     }}
                 >
                     <div className='mx-auto text-center' id='content_video'>
@@ -486,7 +486,7 @@ export const Studio = () => {
                                 alt="Content video"
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 1.0 }}
+                                transition={{ delay: 0.5 }}
                             />
                         </motion.div>
                         
@@ -505,7 +505,7 @@ export const Studio = () => {
                             className='flex justify-between gap-3 lg:gap-0 flex-col lg:flex-row w-[90%] mx-auto mt-6'
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 1.2 }}
+                            transition={{ delay: 0.5 }}
                         >
                             {[
                                 "https://www.youtube.com/embed/uZDPXFQYz0Q?si=Q7zE95rspJ-Yxf9x",
@@ -521,7 +521,7 @@ export const Studio = () => {
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 1.3 + i * 0.1 }}
+                                    transition={{ delay: 0.6 + i * 0.1 }}
                                 />
                             ))}
                         </motion.div>
@@ -534,7 +534,7 @@ export const Studio = () => {
                     config={{
                         initial: { opacity: 0, y: 50 },
                         animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.8 }
+                        transition: { delay: 0.3 }
                     }}
                 >
                     <div className='mx-auto text-center' id='marketing_digital'>
@@ -548,7 +548,7 @@ export const Studio = () => {
                                 alt="Marketing digital"
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.8 }}
+                                transition={{ delay: 0.3 }}
                             />
                         </motion.div>
                         
@@ -567,7 +567,7 @@ export const Studio = () => {
                             className='flex justify-between gap-3 flex-col w-[60%] mx-auto mt-6'
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.9 }}
+                            transition={{ delay: 0.3 }}
                         >
                             {[
                                 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=936,fit=crop/mxB75M8GpXFPvRla/whatsapp-image-2025-01-30-at-16.58.27_06232f5d-d957qxMPGJUPglEe.jpg',
@@ -580,7 +580,7 @@ export const Studio = () => {
                                     alt={`Marketing digital example ${i+1}`}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 1.5 + i * 0.1 }}
+                                    transition={{ delay: 0.4 + i * 0.1 }}
                                 />
                             ))}
                         </motion.div>

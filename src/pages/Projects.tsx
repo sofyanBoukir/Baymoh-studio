@@ -4,12 +4,13 @@ import qawarirImage from '../assets/qawarir.png'
 import elkalaImage from '../assets/elkala.jpeg'
 import bklImage from '../assets/bkl.jpeg'
 import { AnimatedSection } from '../animation/AnimationSection'
+import { motion } from 'framer-motion';
 
 export const Projects = () => {
     return (
         <div className="overflow-hidden">
             <AnimatedSection
-                className='w-full color-to-blue py-16 md:py-20'
+                className='w-full bg-gradient-to-b from-yellow-700 to-amber-900 py-20 md:py-24'
                 config={{
                     initial: { opacity: 0, y: 20 },
                     animate: { opacity: 1, y: 0 },
@@ -20,21 +21,36 @@ export const Projects = () => {
                     <AnimatedSection config={{
                         initial: { opacity: 0, scale: 0.9 },
                         animate: { opacity: 1, scale: 1 },
-                        transition: { delay: 0.2, type: 'spring' }
+                        transition: { 
+                            delay: 0.2, 
+                            type: 'spring',
+                            stiffness: 100,
+                            damping: 10
+                        }
                     }}>
-                        <img 
-                            src={youtubeLogo} 
-                            alt='youtube logo' 
-                            className='mx-auto w-32 h-32 md:w-40 md:h-40 object-contain'
-                        />
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-block p-4 bg-amber-700/30 rounded-full backdrop-blur-sm border-2 border-amber-500/30"
+                        >
+                            <img 
+                                src={youtubeLogo} 
+                                alt='youtube logo' 
+                                className='mx-auto w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-lg'
+                            />
+                        </motion.div>
                     </AnimatedSection>
                     
                     <AnimatedSection config={{
                         initial: { opacity: 0, y: -20 },
                         animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.4 }
+                        transition: { 
+                            delay: 0.4,
+                            type: 'spring',
+                            stiffness: 100
+                        }
                     }}>
-                        <h1 className='text-3xl md:text-5xl text-red-400 font-bold uppercase mt-6'>
+                        <h1 className='text-4xl md:text-6xl font-bold uppercase mt-8 bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500'>
                             YouTube Projects Hub
                         </h1>
                     </AnimatedSection>
@@ -42,15 +58,17 @@ export const Projects = () => {
                     <AnimatedSection config={{
                         initial: { opacity: 0 },
                         animate: { opacity: 1 },
-                        transition: { delay: 0.6 }
+                        transition: { 
+                            delay: 0.6,
+                            duration: 0.8
+                        }
                     }}>
-                        <p className='text-lg md:text-xl text-blue-100 mt-4 max-w-2xl mx-auto'>
-                            Explore innovative projects and channels on YouTube
+                        <p className='text-xl md:text-2xl text-amber-200 mt-6 max-w-2xl mx-auto leading-relaxed'>
+                            Discover <span className='font-semibold text-amber-300'>innovative projects</span> and <span className='font-semibold text-amber-300'>premium content</span> on our YouTube channels
                         </p>
                     </AnimatedSection>
                 </div>
             </AnimatedSection>
-
             <AnimatedSection 
                 className='w-full bg-gradient-to-b from-blue-700 to-sky-500 py-16 md:py-24'
                 config={{
