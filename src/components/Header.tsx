@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
-import agLogo from '../assets/talata-logo.png';
+import agLogo from '../assets/logo.png'
 import { links } from '../constants/links';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ export const Header = () => {
     return (
         <motion.header 
             className={`fixed w-full flex justify-between items-center px-4 md:px-[5%] py-3 top-0 h-[100px] z-50 transition-all duration-300 ${
-                scrolled ? 'bg-sky-900/95 backdrop-blur-md shadow-lg' : 'bg-gradient-to-b from-sky-900 to-sky-800'
+                scrolled ? 'yellow backdrop-blur-md shadow-lg' : 'bg-gradient-to-b yellow'
             }`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -73,13 +73,13 @@ export const Header = () => {
 
             <div className='hidden md:flex gap-4'>
                 {[
-                    { name: 'facebook', color: '#3b5998' },
-                    { name: 'instagram', color: '#e1306c' },
-                    { name: 'tiktok', color: '#010101' }
+                    { name: 'facebook', color: '#3b5998',link:'https://www.facebook.com/baymoh.prod/' },
+                    { name: 'instagram', color: '#e1306c',link:'https://www.instagram.com/baymoh_/' },
+                    { name: 'tiktok', color: '#010101', link:'https://www.tiktok.com/@baymoh_'}
                 ].map((social) => (
                     <motion.a 
                         key={social.name} 
-                        href={`https://${social.name}.com`} 
+                        href={social.link} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all duration-300"
@@ -121,7 +121,7 @@ export const Header = () => {
             <AnimatePresence>
               {mobileMenuOpen && (
                 <motion.div 
-                  className="md:hidden fixed inset-x-0 top-[100px] bg-sky-900 z-50 py-6 px-6 shadow-xl"
+                  className="md:hidden fixed inset-x-0 top-[100px] yellow z-50 py-6 px-6 shadow-xl"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -166,13 +166,13 @@ export const Header = () => {
                   >
                     {
                     [
-                      { name: 'facebook', color: '#3b5998' },
-                      { name: 'instagram', color: '#e1306c' },
-                      { name: 'tiktok', color: '#010101' }
+                      { name: 'facebook', color: '#3b5998',link:'https://www.facebook.com/baymoh.prod/' },
+                      { name: 'instagram', color: '#e1306c',link:'https://www.instagram.com/baymoh_/' },
+                      { name: 'tiktok', color: '#010101', link:'https://www.tiktok.com/@baymoh_'}
                     ].map((social,index) => (
                       <motion.a 
                         key={index} 
-                        href={`https://${social}.com`} 
+                        href={social.link} 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200"

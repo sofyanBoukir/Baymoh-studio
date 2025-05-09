@@ -91,172 +91,188 @@ export const Contact = () => {
 
     return (
         <AnimatedSection 
-            className='w-[100%] bg-gradient-to-b from-sky-950 py-20 text-white to-sky-800'
+            className='w-full bg-gradient-to-b from-amber-50 via-amber-100 to-amber-50 py-20'
             config={{
                 initial: { opacity: 0, y: 20 },
                 animate: { opacity: 1, y: 0 },
                 transition: { duration: 0.8 }
             }}
         >
-            <div className='lg:w-[100%] mx-auto w-[80%] text-center' id='contact'>
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' id='contact'>
                 <AnimatedSection config={{
                     initial: { opacity: 0, y: -20 },
                     animate: { opacity: 1, y: 0 },
                     transition: { delay: 0.2 }
                 }}>
-                    <h1 className="text-5xl font-semibold uppercase text-center">
-                        Contact US
+                    <h1 className="text-4xl md:text-5xl font-bold uppercase text-center text-amber-900 mb-4">
+                        Contact Us
                     </h1>
                 </AnimatedSection>
                 
-                <br />
-
                 <AnimatedSection config={{
                     initial: { opacity: 0 },
                     animate: { opacity: 1 },
                     transition: { delay: 0.4 }
                 }}>
-                    <p className='text-2xl'>
+                    <p className='text-xl md:text-2xl text-center text-amber-800 max-w-3xl mx-auto'>
                         Reach out to our experienced team for exceptional marketing results.
                     </p>
                 </AnimatedSection>
 
-                <div className='flex flex-col items-center w-[100%]'>
+                <div className='flex flex-col lg:flex-row items-center justify-center gap-12 mt-16'>
                     <AnimatedSection config={{
                         initial: { opacity: 0, scale: 0.9 },
                         animate: { opacity: 1, scale: 1 },
-                        transition: { delay: 0 }
-                    }}>
-                        <img src={talata} className='w-[600px] h-[500px]' alt="Contact illustration"/>
+                        transition: { delay: 0.2 }
+                    }} className="lg:w-1/2 w-full">
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                            <img 
+                                src={talata} 
+                                className='w-full h-auto object-cover' 
+                                alt="Contact illustration"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-amber-900/40 to-transparent" />
+                            <div className="absolute bottom-0 left-0 p-6 text-white">
+                                <h3 className="text-2xl font-bold">Studio Baymoh</h3>
+                                <p className="text-amber-200">Creative solutions for your business</p>
+                            </div>
+                        </div>
                     </AnimatedSection>
 
                     <AnimatedSection config={{
                         initial: { opacity: 0, y: 50 },
                         animate: { opacity: 1, y: 0 },
-                        transition: { delay: 0.2 }
-                    }}>
+                        transition: { delay: 0.4 }
+                    }} className="lg:w-1/2 w-full">
                         <form 
                             onSubmit={handleSubmit}
-                            className='bg-white w-[400px] lg:w-[700px] text-start text-black flex flex-col gap-5 py-6 px-6 rounded-3xl border border-black mt-[-120px]'
+                            className='bg-white p-8 rounded-2xl shadow-xl border border-amber-200'
                         >
-                            <motion.div 
-                                className='flex flex-col'
-                                whileHover={{ scale: 1.01 }}
-                                transition={{ type: 'spring', stiffness: 300 }}
-                            >
-                                <label className='text-lg'>Enter your name*</label>
-                                <input 
-                                    type="text" 
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    placeholder='Type your name' 
-                                    className={`px-3 py-2 rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-400'}`}
-                                />
-                                {errors.name && (
-                                    <motion.span 
-                                        className="text-red-500 text-sm"
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                    >
-                                        {errors.name}
-                                    </motion.span>
-                                )}
-                            </motion.div>
+                            <div className="space-y-6">
+                                <motion.div 
+                                    className='space-y-2'
+                                    whileHover={{ scale: 1.01 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
+                                >
+                                    <label className='block text-lg font-medium text-amber-900'>Your Name*</label>
+                                    <input 
+                                        type="text" 
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        placeholder='Type your name' 
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-amber-300 focus:border-amber-500'} focus:ring-2 focus:ring-amber-200 outline-none transition`}
+                                    />
+                                    {errors.name && (
+                                        <motion.span 
+                                            className="block text-red-500 text-sm"
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                        >
+                                            {errors.name}
+                                        </motion.span>
+                                    )}
+                                </motion.div>
 
-                            <motion.div 
-                                className='flex flex-col'
-                                whileHover={{ scale: 1.01 }}
-                                transition={{ type: 'spring', stiffness: 300 }}
-                            >
-                                <label className='text-lg'>Phone number*</label>
-                                <input 
-                                    type="text" 
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    placeholder='Type your phone' 
-                                    className={`px-3 py-2 rounded-md border ${errors.phone ? 'border-red-500' : 'border-gray-400'}`}
-                                />
-                                {errors.phone && (
-                                    <motion.span 
-                                        className="text-red-500 text-sm"
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                    >
-                                        {errors.phone}
-                                    </motion.span>
-                                )}
-                            </motion.div>
+                                <motion.div 
+                                    className='space-y-2'
+                                    whileHover={{ scale: 1.01 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
+                                >
+                                    <label className='block text-lg font-medium text-amber-900'>Phone Number*</label>
+                                    <input 
+                                        type="text" 
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        placeholder='Type your phone number' 
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-amber-300 focus:border-amber-500'} focus:ring-2 focus:ring-amber-200 outline-none transition`}
+                                    />
+                                    {errors.phone && (
+                                        <motion.span 
+                                            className="block text-red-500 text-sm"
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                        >
+                                            {errors.phone}
+                                        </motion.span>
+                                    )}
+                                </motion.div>
 
-                            <motion.div 
-                                className='flex flex-col'
-                                whileHover={{ scale: 1.01 }}
-                                transition={{ type: 'spring', stiffness: 300 }}
-                            >
-                                <label className='text-lg'>Provide your email address*</label>
-                                <input 
-                                    type="email" 
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    placeholder='Type your email' 
-                                    className={`px-3 py-2 rounded-md border ${errors.email ? 'border-red-500' : 'border-gray-400'}`}
-                                />
-                                {errors.email && (
-                                    <motion.span 
-                                        className="text-red-500 text-sm"
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                    >
-                                        {errors.email}
-                                    </motion.span>
-                                )}
-                            </motion.div>
+                                <motion.div 
+                                    className='space-y-2'
+                                    whileHover={{ scale: 1.01 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
+                                >
+                                    <label className='block text-lg font-medium text-amber-900'>Email Address*</label>
+                                    <input 
+                                        type="email" 
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        placeholder='Type your email address' 
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-amber-300 focus:border-amber-500'} focus:ring-2 focus:ring-amber-200 outline-none transition`}
+                                    />
+                                    {errors.email && (
+                                        <motion.span 
+                                            className="block text-red-500 text-sm"
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                        >
+                                            {errors.email}
+                                        </motion.span>
+                                    )}
+                                </motion.div>
 
-                            <motion.div 
-                                className='flex flex-col'
-                                whileHover={{ scale: 1.01 }}
-                                transition={{ type: 'spring', stiffness: 300 }}
-                            >
-                                <label className='text-lg'>Drop us a message*</label>
-                                <textarea 
-                                    rows={4} 
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    placeholder='Write your message' 
-                                    className={`px-3 py-2 rounded-md border ${errors.message ? 'border-red-500' : 'border-gray-400'}`}
-                                />
-                                {errors.message && (
-                                    <motion.span 
-                                        className="text-red-500 text-sm"
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                    >
-                                        {errors.message}
-                                    </motion.span>
-                                )}
-                            </motion.div>
-                            
-                            <motion.button 
-                                type="submit"
-                                className='bg-sky-700 hover:bg-sky-800 duration-100 px-6 py-3 rounded-3xl text-white cursor-pointer w-[70%] lg:w-[40%] mx-auto disabled:opacity-50'
-                                disabled={isSubmitting}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                {isSubmitting ? (
-                                    <motion.span
-                                        animate={{ opacity: [0.5, 1, 0.5] }}
-                                        transition={{ repeat: Infinity, duration: 1.5 }}
-                                    >
-                                        Sending...
-                                    </motion.span>
-                                ) : (
-                                    'Send message now'
-                                )}
-                            </motion.button>
+                                <motion.div 
+                                    className='space-y-2'
+                                    whileHover={{ scale: 1.01 }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
+                                >
+                                    <label className='block text-lg font-medium text-amber-900'>Your Message*</label>
+                                    <textarea 
+                                        rows={4} 
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        placeholder='Type your message here?' 
+                                        className={`w-full px-4 py-3 rounded-lg border ${errors.message ? 'border-red-500' : 'border-amber-300 focus:border-amber-500'} focus:ring-2 focus:ring-amber-200 outline-none transition`}
+                                    />
+                                    {errors.message && (
+                                        <motion.span 
+                                            className="block text-red-500 text-sm"
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                        >
+                                            {errors.message}
+                                        </motion.span>
+                                    )}
+                                </motion.div>
+                                
+                                <motion.button 
+                                    type="submit"
+                                    className='w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 px-6 py-4 rounded-xl text-white font-bold cursor-pointer disabled:opacity-70 transition-all duration-300 shadow-lg hover:shadow-amber-700/30'
+                                    disabled={isSubmitting}
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                >
+                                    {isSubmitting ? (
+                                        <motion.span
+                                            animate={{ opacity: [0.5, 1, 0.5] }}
+                                            transition={{ repeat: Infinity, duration: 1.5 }}
+                                            className="flex items-center justify-center gap-2"
+                                        >
+                                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Sending...
+                                        </motion.span>
+                                    ) : (
+                                        'Send Message'
+                                    )}
+                                </motion.button>
+                            </div>
                         </form>
                     </AnimatedSection>
                 </div>
