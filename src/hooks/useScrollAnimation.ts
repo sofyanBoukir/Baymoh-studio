@@ -1,13 +1,7 @@
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import type { ScrollAnimationConfig } from '../types/animation';
 
-type ScrollAnimationConfig = {
-  triggerOnce?: boolean;
-  threshold?: number;
-  initial?: Record<string, unknown>;
-  animate?: Record<string, unknown>;
-  transition?: Record<string, unknown>;
-};
 
 export const useScrollAnimation = (config?: ScrollAnimationConfig) => {
   const ref = useRef(null);
