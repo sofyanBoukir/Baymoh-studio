@@ -74,7 +74,7 @@ export const Contact = () => {
             ${formData.message}
         `.replace(/^\s+/gm, '');
         
-        const mailtoLink = `mailto:soufianeboukir0@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailtoLink = `mailto:contact.baymoh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
         window.location.href = mailtoLink;
         

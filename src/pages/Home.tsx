@@ -308,17 +308,7 @@ export const Home = () => {
               </Link>
             </div>
           </AnimatedSection>
-        </div>
-      </AnimatedSection>
-
-      <AnimatedSection
-        config={{
-          initial: { opacity: 0 },
-          animate: { opacity: 1 },
-          transition: { delay: 0.6 }
-        }}
-      >
-        <div className='text-center py-16 bg-gradient-to-b from yellow to-amber-800'>
+                  <br /><br />
           <h1 className='text-4xl sm:text-5xl font-bold uppercase mb-4 text-amber-100'>
             Our clients
           </h1>
