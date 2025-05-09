@@ -1,13 +1,16 @@
 {
-  "name": "s-talata-clone",
+  "name": "Baymoh-studio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sofyanBoukir.github.io/Baymoh-studio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
