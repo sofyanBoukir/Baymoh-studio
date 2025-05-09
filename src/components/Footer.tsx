@@ -9,15 +9,14 @@ export const Footer = () => {
         <AnimatedSection
             className="bg-amber-600 w-full"
             config={{
-                initial: { opacity: 0, y: 50 },
+                initial: { opacity: 0 },
                 animate: { opacity: 1, y: 0 },
                 transition: { duration: 0.8 }
             }}
         >
-            <div className="text-amber-50 flex flex-col lg:flex-row items-center lg:items-start justify-between lg:gap-0 text-center lg:text-start max-w-7xl mx-auto px-5 md:px-[5%] py-20">
+            <div className="text-amber-50 flex flex-col lg:flex-row lg:items-start justify-between lg:gap-0 items-center gap-5 text-center lg:text-start max-w-7xl mx-auto px-5 md:px-[5%] py-20">
                 <AnimatedSection
                     config={{
-                        initial: { opacity: 0, x: -20 },
                         animate: { opacity: 1, x: 0 },
                         transition: { delay: 0.2 }
                     }}
@@ -25,7 +24,7 @@ export const Footer = () => {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="w-40 h-20"
+                        className="w-40 h-20 mt-[-27px]"
                     >
                         <img src={logo} alt='logo' className='w-full h-full object-contain'/>
                     </motion.div>
@@ -159,7 +158,6 @@ export const Footer = () => {
 
             <AnimatedSection
                 config={{
-                    initial: { opacity: 0, y: 20 },
                     animate: { opacity: 1, y: 0 },
                     transition: { delay: 1.0 }
                 }}
@@ -167,7 +165,6 @@ export const Footer = () => {
                 <div className="py-6 text-center">
                     <motion.p 
                         className='text-amber-200 font-medium text-lg'
-                        whileHover={{ scale: 1.05 }}
                     >
                         © 2025 Studio Baymoh. All rights reserved.
                     </motion.p>
